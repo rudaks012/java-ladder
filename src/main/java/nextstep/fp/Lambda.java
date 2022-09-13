@@ -31,7 +31,7 @@ public class Lambda {
 //        for (int number : numbers) {
 //            total += number;
 //        }
-        return numbers.stream().reduce(0, (x,y) -> x + y);
+        return numbers.stream().reduce(0, Integer::sum);
     }
 
     public static int sumAllEven(List<Integer> numbers) {
