@@ -27,11 +27,11 @@ public class Lambda {
     }
 
     public static int sumAll(List<Integer> numbers) {
-        int total = 0;
-        for (int number : numbers) {
-            total += number;
-        }
-        return total;
+//        int total = 0;
+//        for (int number : numbers) {
+//            total += number;
+//        }
+        return numbers.stream().reduce(0, (x,y) -> x + y);
     }
 
     public static int sumAllEven(List<Integer> numbers) {
