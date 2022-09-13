@@ -1,15 +1,12 @@
 package nextstep.fp;
 
 import java.util.List;
-import java.util.stream.Collectors;
 
 public class Lambda {
     public static void printAllOld(List<Integer> numbers) {
         System.out.println("printAllOld");
 
-        for (int number : numbers) {
-            System.out.println(number);
-        }
+        numbers.forEach(System.out::println);
     }
 
     public static void printAllLambda(List<Integer> numbers) {
