@@ -3,10 +3,19 @@ package nextstep.fp;
 import java.util.List;
 
 public class Lambda {
+
+    public static int totalSum(List<Integer> numbers, Conditional conditional) {
+        return numbers.stream()
+                .filter(number -> conditional.permitAdd(number))
+                .reduce(0, (x, y) -> x + y);
+    }
+
     public static void printAllOld(List<Integer> numbers) {
         System.out.println("printAllOld");
 
-        numbers.forEach(System.out::println);
+        for (int number : numbers) {
+            System.out.println(number);
+        }
     }
 
     public static void printAllLambda(List<Integer> numbers) {
@@ -20,23 +29,14 @@ public class Lambda {
     }
 
     public static int sumAll(List<Integer> numbers) {
-        return numbers.stream().reduce(0, Integer::sum);
+        return totalSum(numbers, number -> true);
     }
 
     public static int sumAllEven(List<Integer> numbers) {
-        return numbers.stream()
-                .filter(number -> number % 2 == 0)
-                .mapToInt(Integer::intValue)
-                .sum();
+        return totalSum(numbers, number -> number % 2 == 0);
     }
 
     public static int sumAllOverThree(List<Integer> numbers) {
-        int total = 0;
-        for (int number : numbers) {
-            if (number > 3) {
-                total += number;
-            }
-        }
-        return total;
+        return totalSum(numbers, number -> number > 3);
     }
 }
