@@ -24,19 +24,20 @@
 
 #### map, filter, reduce 실습1
 - List에 담긴 모든 숫자중 3보다 큰 숫자를 2배 한후 모든값의 합을 구한다
-  -[ ] nextstep.fp.StreamStudyTest 클래스의 sumOverThreeAndDouble() 테스트를 pass해야 한
+  -[x] nextstep.fp.StreamStudyTest 클래스의 sumOverThreeAndDouble() 테스트를 pass해야 한
     다.
 #### map, filter, reduce 실습2
 - nextstep.fp.StreamStudy 클래스의 printLongestWordTop100() 메서드를 구현
   - 요구사항
-  -[ ] 단어의 길이가 12자를 초과 단어 추출
-  -[ ] 12자가 넘는 단어 중 길이가 긴 순서로 100개 추출
-  -[ ] 단어 중복 허용X , 서로 다른 단어 100개 추출
-  -[ ] 추출한 100개의 단어를 출력, 모든 단어는 소문자로 출력
+  -[x] 단어의 길이가 12자를 초과 단어 추출
+  -[x] 12자가 넘는 단어 중 길이가 긴 순서로 100개 추출
+  -[x] 단어 중복 허용X , 서로 다른 단어 100개 추출
+  -[x] 추출한 100개의 단어를 출력, 모든 단어는 소문자로 출력
 
 #### 힌트
 - 단어의 길이가 12자를 초과하는 단어를 추출 
 - 12자가 넘는 단어중 길이가 긴 순서로 100개 단어를 추출 - sorted 사용
+  - Comparator.comparing -> 
 - 단어 중복을 허용하지 않는다. - dintinct 사용
 - 추출한 100개의 단어를 출력 모든 단어는 소문자로 출력 String.toLowerCase 사용
 
