@@ -4,17 +4,29 @@ import java.util.Objects;
 
 public class Name {
 
+    public static final int MAX_LENGTH = 5;
     private final String name;
 
     public Name(final String name) {
+        validateEmpty(name);
+        validateLength(name);
+        this.name = name;
+    }
+
+    private static void validateLength(String name) {
+        if (name.length() > MAX_LENGTH) {
+            throw new IllegalArgumentException("사람의 이름은 최대 5글자 까지 부여할 수 있다.");
+        }
+    }
+
+    private static void validateEmpty(String name) {
         if (name == null || name.isEmpty()) {
             throw new IllegalArgumentException("사람의 이름은 null 이거나 빈 값일 수가 없다.");
         }
-        if (name.length() > 5) {
-            throw new IllegalArgumentException("사람의 이름은 최대 5글자 까지 부여할 수 있다.");
-        }
+    }
 
-        this.name = name;
+    public String getName() {
+        return name;
     }
 
     @Override
