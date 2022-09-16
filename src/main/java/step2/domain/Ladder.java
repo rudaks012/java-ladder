@@ -5,9 +5,16 @@ import java.util.List;
 
 public class Ladder {
 
-    private List<Boolean> ladderPoint = new ArrayList<>();
+    private Name name;
 
-    public Ladder(int countOfPerson) {
+    private Line line;
 
+    public Ladder(final String name) {
+        this(name, Line.ZERO);
+    }
+
+    public Ladder(final String name, final Line line) {
+        this.name = new Name(name);
+        this.line = line;
     }
 }
