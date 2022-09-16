@@ -5,7 +5,7 @@ import java.util.List;
 
 public class Line {
 
-    private List<Point> points = new ArrayList<>();
+    private List<Point> points ;
 
     public Line(List<Point> points) {
         this.points = points;
@@ -15,7 +15,14 @@ public class Line {
         List<Point> points = new ArrayList<>();
 
         points.add(new Point());
+        for (int i = 1; i < width; i++) {
+            points.add(points.get(i - 1).nextPoint());
+        }
 
         return new Line(points);
+    }
+
+    public List<Point> getPoints() {
+        return points;
     }
 }
