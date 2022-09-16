@@ -4,7 +4,6 @@ import org.assertj.core.api.Assertions;
 import org.assertj.core.api.ThrowableAssert;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-import step2.domain.GameParticipants;
 
 public class GameParticipantsTest {
 
