@@ -23,15 +23,17 @@ public class ResultView {
 
     private static void printLine(List<Point> points) {
         System.out.print("     ");
-        points.forEach(point -> {
-            if (point.isExist()) {
-                System.out.print("|-----");
-                return;
-            }
-
-            System.out.print("|     ");
-        });
+        points.forEach(ResultView::printSpecialSymbol);
         System.out.println("|");
+    }
+
+    private static void printSpecialSymbol(Point point) {
+        if (point.isExist()) {
+            System.out.print("|-----");
+            return;
+        }
+
+        System.out.print("|     ");
     }
 
     private static void printParticipant(String point) {

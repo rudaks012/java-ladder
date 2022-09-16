@@ -23,6 +23,4 @@ public class Point {
     public boolean isExist() {
         return exits;
     }
-
-
 }
