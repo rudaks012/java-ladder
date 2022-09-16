@@ -2,6 +2,7 @@ package step2;
 
 import step2.domain.Ladder;
 import step2.ui.InputView;
+import step2.ui.ResultView;
 
 import java.util.List;
 
@@ -12,5 +13,7 @@ public class LadderGameApplication {
         int height = InputView.maxLadderHeight();
 
         Ladder ladder = new Ladder(participants.size() -1, height);
+
+        ResultView.printResult(participants, ladder);
     }
 }
