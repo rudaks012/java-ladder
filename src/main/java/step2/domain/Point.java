@@ -20,7 +20,9 @@ public class Point {
         return new Point();
     }
 
-    private boolean isExist() {
+    public boolean isExist() {
         return exits;
     }
+
+
 }
