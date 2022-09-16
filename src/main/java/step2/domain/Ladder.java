@@ -1,11 +1,8 @@
 package step2.domain;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class Ladder {
 
-    private Name name;
+    private final Name name;
 
     private Line line;
 
@@ -16,5 +13,13 @@ public class Ladder {
     public Ladder(final String name, final Line line) {
         this.name = new Name(name);
         this.line = line;
+    }
+
+    public String name() {
+        return name.getName();
+    }
+
+    public int line() {
+        return line.getValue();
     }
 }

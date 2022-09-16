@@ -6,6 +6,13 @@ public class Line {
 
 
     public Line(int value) {
+        if (value < 0) {
+            throw new IllegalArgumentException("사다리의 수는 음수가 될수 없다.");
+        }
         this.value = value;
+    }
+
+    public int getValue() {
+        return value;
     }
 }
