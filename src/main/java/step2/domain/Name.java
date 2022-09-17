@@ -8,9 +8,13 @@ public class Name {
     private final String name;
 
     public Name(final String name) {
+        validation(name);
+        this.name = name;
+    }
+
+    private static void validation(String name) {
         validateEmpty(name);
         validateLength(name);
-        this.name = name;
     }
 
     private static void validateLength(String name) {

@@ -11,8 +11,9 @@ public class LadderGameApplication {
         GameParticipants gameParticipants = new GameParticipants(InputView.names());
         int height = InputView.maxLadderHeight();
 
-        Ladder ladder = new Ladder(gameParticipants.size() -1, height);
+        Ladder ladder = new Ladder(gameParticipants.getNames(), height);
 
+        ResultView.printResultMessage();
         ResultView.printResult(gameParticipants.getParticipants(), ladder);
     }
 }
