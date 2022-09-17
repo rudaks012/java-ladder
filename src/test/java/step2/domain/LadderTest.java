@@ -12,7 +12,8 @@ public class LadderTest {
         int width = 0;
         int height = 0;
         Assertions.assertThatThrownBy(() -> new Ladder(width,height))
-                .isInstanceOf(IllegalArgumentException.class);
+                .isInstanceOf(IllegalArgumentException.class)
+                .hasMessage("높이와 넓이는 1 이상이어야 한다.");
 
     }
 }

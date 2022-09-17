@@ -5,6 +5,7 @@ import java.util.List;
 
 public class Ladder {
 
+    public static final int LADDER_LIMIT = 1;
     private final List<Line> lines = new ArrayList<>();
 
     public Ladder(int width, int height) {
@@ -15,8 +16,8 @@ public class Ladder {
     }
 
     private static void validationWidthAndHeight(int width, int height) {
-        if (width < 1 && height < 1) {
-            throw new IllegalArgumentException();
+        if (width < LADDER_LIMIT && height < LADDER_LIMIT) {
+            throw new IllegalArgumentException("높이와 넓이는 1 이상이어야 한다.");
         }
     }
 
