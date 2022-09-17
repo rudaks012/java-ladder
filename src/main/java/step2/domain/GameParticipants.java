@@ -27,7 +27,7 @@ public class GameParticipants {
     }
 
     public int getParticipantSize() {
-        return participants.size() -1;
+        return participants.size() - 1;
     }
 
     public List<Name> getParticipants() {
