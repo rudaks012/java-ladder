@@ -8,6 +8,7 @@ public class GameParticipants {
 
     public static final String THROW_MESSAGE_GAME_PARTICIPANTS_TWO_DOWN = "게임 참석자가 2명 미만이면 예외가 발생한다.";
     public static final int GAME_PARTICIPANT_LIMIT = 2;
+
     private final List<Name> participants;
 
     public GameParticipants(final String[] names) {

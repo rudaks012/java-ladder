@@ -3,10 +3,12 @@ package step2.domain;
 import java.util.Random;
 
 public class Point {
+    public static final boolean RANDOM_BOOLEAN = new Random().nextBoolean();
+
     private final boolean exits;
 
     public Point() {
-        this(new Random().nextBoolean());
+        this(RANDOM_BOOLEAN);
     }
 
     public Point(boolean exits) {

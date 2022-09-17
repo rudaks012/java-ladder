@@ -6,6 +6,7 @@ import java.util.List;
 public class Ladder {
 
     public static final int LADDER_LIMIT = 1;
+
     private final List<Line> lines = new ArrayList<>();
 
     public Ladder(int width, int height) {
