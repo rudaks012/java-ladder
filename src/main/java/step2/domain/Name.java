@@ -7,6 +7,7 @@ public class Name {
     public static final int MAX_LENGTH = 5;
     public static final String MESSAGE_NAME_MAX_FIVE_LENGTH = "사람의 이름은 최대 5글자 까지 부여할 수 있다.";
     public static final String MESSAGE_NAME_NOT_NULL_OR_EMPTY = "사람의 이름은 null 이거나 빈 값일 수가 없다.";
+
     private final String name;
 
     public Name(String name) {
