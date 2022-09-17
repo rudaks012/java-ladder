@@ -5,9 +5,11 @@ import java.util.Objects;
 public class Name {
 
     public static final int MAX_LENGTH = 5;
+    public static final String MESSAGE_NAME_MAX_FIVE_LENGTH = "사람의 이름은 최대 5글자 까지 부여할 수 있다.";
+    public static final String MESSAGE_NAME_NOT_NULL_OR_EMPTY = "사람의 이름은 null 이거나 빈 값일 수가 없다.";
     private final String name;
 
-    public Name(final String name) {
+    public Name(String name) {
         validation(name);
         this.name = name;
     }
@@ -19,13 +21,13 @@ public class Name {
 
     private static void validateLength(String name) {
         if (name.length() > MAX_LENGTH) {
-            throw new IllegalArgumentException("사람의 이름은 최대 5글자 까지 부여할 수 있다.");
+            throw new IllegalArgumentException(MESSAGE_NAME_MAX_FIVE_LENGTH);
         }
     }
 
     private static void validateEmpty(String name) {
         if (name == null || name.isEmpty()) {
-            throw new IllegalArgumentException("사람의 이름은 null 이거나 빈 값일 수가 없다.");
+            throw new IllegalArgumentException(MESSAGE_NAME_NOT_NULL_OR_EMPTY);
         }
     }
 

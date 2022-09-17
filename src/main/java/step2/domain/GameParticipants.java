@@ -1,24 +1,36 @@
 package step2.domain;
 
+import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class GameParticipants {
 
     public static final String THROW_MESSAGE_GAME_PARTICIPANTS_TWO_DOWN = "게임 참석자가 2명 미만이면 예외가 발생한다.";
-    private final List<String> participants;
+    private final List<Name> participants;
 
     public GameParticipants(final String[] names) {
+        validatePersonnel(names);
+        this.participants = createName(names);
+    }
+
+    private static void validatePersonnel(String[] names) {
         if (names.length < 2) {
             throw new IllegalArgumentException(THROW_MESSAGE_GAME_PARTICIPANTS_TWO_DOWN);
         }
-        this.participants = List.of(names);
     }
 
-    public int getNames() {
+    private List<Name> createName(String[] names) {
+        return Arrays.stream(names)
+                .map(Name::new)
+                .collect(Collectors.toUnmodifiableList());
+    }
+
+    public int getParticipantSize() {
         return participants.size() -1;
     }
 
-    public List<String> getParticipants() {
+    public List<Name> getParticipants() {
         return participants;
     }
 }
