@@ -9,12 +9,12 @@ public class InputView {
     private static final Scanner SCANNER = new Scanner(System.in);
     public static final String DELIMITER = ",";
 
-    public static String[] names() {
+    public static String[] enterNames() {
         println(MESSAGE_GAME_PARTICIPANT_NAMES);
         return SCANNER.nextLine().split(DELIMITER);
     }
 
-    public static int maxLadderHeight() {
+    public static int enterHeight() {
         println(MESSAGE_MAX_LADDER_COUNT);
         return SCANNER.nextInt();
     }

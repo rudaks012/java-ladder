@@ -8,8 +8,8 @@ import step2.ui.ResultView;
 public class LadderGameApplication {
 
     public static void main(String[] args) {
-        GameParticipants gameParticipants = new GameParticipants(InputView.names());
-        int height = InputView.maxLadderHeight();
+        GameParticipants gameParticipants = new GameParticipants(InputView.enterNames());
+        int height = InputView.enterHeight();
 
         Ladder ladder = new Ladder(gameParticipants.getParticipantSize(), height);
 

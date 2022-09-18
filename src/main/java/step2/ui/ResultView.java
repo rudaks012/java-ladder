@@ -11,6 +11,7 @@ public class ResultView {
 
     public static final int PARTICIPANT_MATCH_LADDER_SIZE = 6;
     public static final String EXECUTION_RESULT = "실행 결과";
+
     public static void printResultMessage() {
         println(EXECUTION_RESULT);
     }

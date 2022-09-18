@@ -22,7 +22,7 @@ public class Name {
 
     private static void validateLength(String name) {
         if (name.length() > MAX_LENGTH) {
-            throw new IllegalArgumentException(MESSAGE_NAME_MAX_FIVE_LENGTH);
+            throw new NameException(name);
         }
     }
 

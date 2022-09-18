@@ -12,13 +12,13 @@ import static org.assertj.core.api.ThrowableAssert.ThrowingCallable;
 public class NameTest {
 
     @Test
-    @DisplayName("사람에 이름을 최대 5글자 까지 부여할 수 있다.")
+    @DisplayName("사람의 이름은 최대 5글자 까지 부여할 수 있다.")
     void person_name_max_five_letters() {
         final ThrowingCallable actual = () -> new Name("가나다라마바");
 
         assertThatThrownBy(actual)
-                .isInstanceOf(IllegalArgumentException.class)
-                .hasMessage("사람의 이름은 최대 5글자 까지 부여할 수 있다.");
+                .isInstanceOf(NameException.class)
+                .hasMessage("사람의 이름은 최대 5글자 까지 부여할 수 있다. 입력값 : 가나다라마바");
     }
 
     @ParameterizedTest(name = "사람의 이름은 null 이거나 빈 값일 수가 없다. :[{index}] : [{arguments}]")
