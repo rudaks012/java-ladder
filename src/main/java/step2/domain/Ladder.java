@@ -18,7 +18,7 @@ public class Ladder {
 
     private static void validationWidthAndHeight(int width, int height) {
         if (width < LADDER_LIMIT && height < LADDER_LIMIT) {
-            throw new IllegalArgumentException("높이와 넓이는 1 이상이어야 한다.");
+            throw new LadderException(width, height);
         }
     }
 
