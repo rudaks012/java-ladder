@@ -7,14 +7,19 @@ public class InputView {
     public static final String MESSAGE_GAME_PARTICIPANT_NAMES = "참여할 사람 이름을 입력하세요";
     public static final String MESSAGE_MAX_LADDER_COUNT = "최대 사다리 높이는 몇 개 인가요?";
     private static final Scanner SCANNER = new Scanner(System.in);
+    public static final String DELIMITER = ",";
 
     public static String[] names() {
-        System.out.println(MESSAGE_GAME_PARTICIPANT_NAMES);
-        return SCANNER.nextLine().split(",");
+        println(MESSAGE_GAME_PARTICIPANT_NAMES);
+        return SCANNER.nextLine().split(DELIMITER);
     }
 
     public static int maxLadderHeight() {
-        System.out.println(MESSAGE_MAX_LADDER_COUNT);
+        println(MESSAGE_MAX_LADDER_COUNT);
         return SCANNER.nextInt();
+    }
+
+    private static void println(String message) {
+        System.out.println(message);
     }
 }
