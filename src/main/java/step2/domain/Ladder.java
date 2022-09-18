@@ -5,7 +5,7 @@ import java.util.List;
 
 public class Ladder {
 
-    public static final int LADDER_LIMIT = 1;
+    public static final int LADDER_CONDITION_LIMIT = 1;
 
     private final List<Line> lines = new ArrayList<>();
 
@@ -17,7 +17,7 @@ public class Ladder {
     }
 
     private static void validationWidthAndHeight(int width, int height) {
-        if (width < LADDER_LIMIT && height < LADDER_LIMIT) {
+        if (width < LADDER_CONDITION_LIMIT || height < LADDER_CONDITION_LIMIT) {
             throw new LadderException(width, height);
         }
     }
