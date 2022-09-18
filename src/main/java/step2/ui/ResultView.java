@@ -12,7 +12,7 @@ public class ResultView {
     public static final int PARTICIPANT_MATCH_LADDER_SIZE = 6;
     public static final String EXECUTION_RESULT = "실행 결과";
     public static void printResultMessage() {
-        System.out.println(EXECUTION_RESULT);
+        println(EXECUTION_RESULT);
     }
 
     public static void printResult(List<Name> participants, Ladder ladder) {
@@ -27,21 +27,25 @@ public class ResultView {
     private static void printParticipant(Name participant) {
         String name = "       " + participant.getName();
         name = name.substring(name.length() - PARTICIPANT_MATCH_LADDER_SIZE);
-        System.out.print(name);
+        println(name);
     }
 
     private static void printLine(List<Point> points) {
-        System.out.print("     ");
+        println("     ");
         points.forEach(ResultView::printSpecialSymbol);
-        System.out.println("|");
+        println("|");
     }
 
     private static void printSpecialSymbol(Point point) {
         if (point.isExist()) {
-            System.out.print("|-----");
+            println("|-----");
             return;
         }
 
-        System.out.print("|     ");
+        println("|     ");
+    }
+
+    private static void println(String message) {
+        System.out.println(message);
     }
 }
